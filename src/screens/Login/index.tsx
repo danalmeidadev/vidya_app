@@ -5,8 +5,10 @@ import { InputForm } from '~/components/InputForm';
 import { Text, View } from 'react-native';
 import { Images } from '~/assets/images';
 import { Button } from '~/components/Button';
+import { IAuth } from '~/store/modules/auth/types';
+import { useDispatch } from 'react-redux';
+import { authRequest } from '~/store/modules/auth/actions';
 import { shemaValidation } from './shemaValidation';
-
 import {
   ButtonCreateAccount,
   Container,
@@ -21,13 +23,23 @@ import {
 } from './styles';
 
 export function Login() {
+  const dispatch = useDispatch();
   const {
     control,
     handleSubmit,
     formState: { errors },
-  } = useForm({
+  } = useForm<IAuth>({
     resolver: yupResolver(shemaValidation),
   });
+
+  const handleLogged = (form: IAuth) => {
+    dispatch(
+      authRequest({
+        email: form.email,
+        password: form.password,
+      }),
+    );
+  };
   return (
     <Background source={Images.BackgroundWithEffect}>
       <Container>
@@ -37,27 +49,28 @@ export function Login() {
         <WrapperForm>
           <Fields>
             <InputForm
-              name="name"
+              name="email"
               control={control}
-              placeholder="CNPJ"
+              placeholder="Email"
               autoCorrect={false}
-              autoCapitalize="sentences"
-              error={errors.name && errors.name.message}
+              autoCapitalize="none"
+              error={errors.email && errors.email.message}
             />
           </Fields>
           <Fields>
             <InputForm
-              name="name"
+              name="password"
               control={control}
-              placeholder="Nome"
+              placeholder="Senha"
               autoCorrect={false}
               autoCapitalize="sentences"
-              error={errors.name && errors.name.message}
+              secureTextEntry
+              error={errors.password && errors.password.message}
             />
           </Fields>
         </WrapperForm>
         <WrapperFooter>
-          <Button title="Salvar" />
+          <Button title="Salvar" onPress={handleSubmit(handleLogged)} />
         </WrapperFooter>
       </Container>
     </Background>

@@ -11,6 +11,7 @@ import { IGetClientsState } from './modules/getClients/types';
 import { IGetClientsWithProductsState } from './modules/getClientsWithProducts/types';
 import { IGetUsersWithProductsState } from './modules/getusersWithProducts/types';
 import { IUserState } from './modules/user/types';
+import { IAuthState } from './modules/auth/types';
 
 export interface IAplicationState {
   document: IConsultDocumentState;
@@ -19,6 +20,7 @@ export interface IAplicationState {
   getClientsWithProducts: IGetClientsWithProductsState;
   getUsersWithProducts: IGetUsersWithProductsState;
   user: IUserState;
+  auth: IAuthState;
 }
 
 const persistedReducer = persistReducer(

@@ -28,7 +28,6 @@ export function* createProduct({ payload }: any) {
 
     yield put(actionCreateProduct.createProductSuccess(response));
   } catch (error) {
-    console.log(error);
     yield put(actionCreateProduct.createProductFailure());
     DropdownAlert.show({
       type: 'error',

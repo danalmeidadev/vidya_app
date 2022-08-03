@@ -5,5 +5,6 @@ import { LoggedBottonBar } from './Logeed';
 import { UnlogedStackNavigation } from './UnLogged';
 
 export function RoutesNavigation() {
-  return <LoggedBottonBar />;
+  const logged = useSelector((state: IAplicationState) => state.auth.isLogged);
+  return <>{logged ? <LoggedBottonBar /> : <UnlogedStackNavigation />}</>;
 }

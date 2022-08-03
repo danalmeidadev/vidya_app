@@ -8,7 +8,6 @@ import { userActions } from './types';
 export function* userCreate({ payload }: any) {
   try {
     const { user } = payload;
-    console.log('user', user);
     const data = {
       name: user.name,
       email: user.email,
@@ -23,7 +22,6 @@ export function* userCreate({ payload }: any) {
     }
     yield put(actionUser.usersSuccess(response));
   } catch (error) {
-    console.log(error);
     yield put(actionUser.usersFailure());
     DropdownAlert.show({
       type: 'error',

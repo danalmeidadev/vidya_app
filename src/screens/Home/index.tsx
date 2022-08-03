@@ -38,8 +38,6 @@ export function Home() {
     return () => getClientsProducts();
   }, [getClientsProducts]);
 
-  console.log('getClientsWithProducts', getClientsWithProducts);
-
   const renderClientsProducts = ({
     item,
     index,

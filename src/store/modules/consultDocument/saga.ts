@@ -9,7 +9,6 @@ import { consultDocumentActions } from './types';
 
 export function* consult({ payload }: any) {
   try {
-    console.log(payload);
     const { document } = payload;
     const response: AxiosResponse<any> = yield call(
       fetchConsultDocument,

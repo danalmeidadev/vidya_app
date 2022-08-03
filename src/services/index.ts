@@ -46,8 +46,13 @@ const fetchGetUsersWithProducts = async () => {
   const response = await vidyaApi.get('/products?_embed=users');
   return response.data;
 };
+const fetchAuth = async () => {
+  const response = await vidyaApi.get('/auth');
+  return response.data;
+};
 
 export {
+  fetchAuth,
   fetchConsultDocument,
   vidyaApi,
   fetchCreateProducts,

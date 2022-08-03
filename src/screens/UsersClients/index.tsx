@@ -45,7 +45,7 @@ export function UsersClients() {
 
   return (
     <Background source={Images.BackgroundWithEffect}>
-      <HeaderIconBack />
+      <HeaderIconBack screenName="Adicionar usuário" />
       <Container>
         <WrapperLogo>
           <Image source={Images.Logo} resizeMode="contain" />

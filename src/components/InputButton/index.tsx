@@ -23,9 +23,7 @@ export function InputButton({
           <Name>{title}</Name>
         </WrapperValue>
       </ButtonSelect>
-      {error && (
-        <Error error={title === 'Selecione' ? error : false}>{errorName}</Error>
-      )}
+      {error && <Error error={error}>{errorName}</Error>}
     </Container>
   );
 }

@@ -8,6 +8,6 @@ export const Container = styled.View`
 export const Error = styled.Text`
   font-family: ${({ theme }) => theme.fonts.Poppins600SemiBold};
   color: ${({ theme }) => theme.colors.error};
-  font-size: ${RFValue(14)}px;
+  font-size: ${RFValue(12)}px;
   margin-bottom: 12px;
 `;

@@ -24,13 +24,9 @@ export function GetStart() {
         </WrapperLogo>
         <WrapperButton>
           <Button
-            title="Criar conta"
-            onPress={() => navigate(Routes.UNLOGGED.CREATEACCOUNT)}
-          />
-          <Button
             title="Entrar"
-            backgroundColor={colors.white}
-            colorTitle={colors.title}
+            backgroundColor={colors.primary}
+            colorTitle={colors.white}
             onPress={() => navigate(Routes.UNLOGGED.LOGIN)}
           />
         </WrapperButton>

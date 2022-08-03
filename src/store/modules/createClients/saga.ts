@@ -30,7 +30,6 @@ export function* createClient({ payload }: any) {
     }
     yield put(actionCreateClient.createClientSuccess(response));
   } catch (error) {
-    console.log(error);
     yield put(actionCreateClient.createClientFailure());
     DropdownAlert.show({
       type: 'error',

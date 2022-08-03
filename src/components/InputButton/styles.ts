@@ -26,6 +26,9 @@ export const Name = styled.Text`
 `;
 
 export const Error = styled.Text<IPropsStatus>`
+  font-family: ${({ theme }) => theme.fonts.Poppins600SemiBold};
+  color: ${({ theme }) => theme.colors.error};
+  font-size: ${RFValue(12)}px;
   ${({ theme, error }) =>
     error
       ? css`

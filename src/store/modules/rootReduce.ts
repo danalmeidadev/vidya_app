@@ -6,6 +6,7 @@ import getClients from './getClients/reducer';
 import getClientsWithProducts from './getClientsWithProducts/reducer';
 import getUsersWithProducts from './getUsersWithProducts/reducer';
 import user from './user/reducer';
+import auth from './auth/reducer';
 
 export default combineReducers({
   document,
@@ -15,4 +16,5 @@ export default combineReducers({
   getClientsWithProducts,
   getUsersWithProducts,
   user,
+  auth,
 });

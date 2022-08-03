@@ -9,6 +9,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "commit": "git-cz",
     "server": "json-server --watch db.json",
+    "pod": "cd ios && pod install && cd ..",
     "web": "expo start --web"
   },
   "husky": {

@@ -9,7 +9,7 @@ import { createProductRequest } from '~/store/modules/createProducts/actions';
 import { useDispatch } from 'react-redux';
 import { HeaderIconBack } from '~/components/HeaderIconBack';
 import { InputButton } from '~/components/InputButton';
-import { useNavigation } from '@react-navigation/native';
+import { DropdownAlert } from '@nghinv/react-native-dropdown-alert';
 import { shemaValidation } from './shemaValidation';
 
 import {
@@ -40,8 +40,15 @@ export function Products() {
   } = useForm<ICreateProductsProps>({
     resolver: yupResolver(shemaValidation),
   });
-
   const handleCreateClients = (form: ICreateProductsProps) => {
+    if (clients.id === 0) {
+      DropdownAlert.show({
+        type: 'error',
+        message: 'Oops! Selecione um cliente!',
+      });
+      return;
+    }
+
     dispatch(
       createProductRequest({
         description: form.description,

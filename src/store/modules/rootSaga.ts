@@ -6,6 +6,7 @@ import getClients from './getClients/saga';
 import getClientsWithProducts from './getClientsWithProducts/saga';
 import getUsersWithProducts from './getUsersWithProducts/saga';
 import user from './user/saga';
+import auth from './auth/saga';
 
 export default function* rootSaga() {
   yield all([
@@ -16,5 +17,6 @@ export default function* rootSaga() {
     getClientsWithProducts,
     getUsersWithProducts,
     user,
+    auth,
   ]);
 }

@@ -1,39 +1,15 @@
 {
+  "auth": [
+    {
+      "email": "teste@teste.com",
+      "password": "123456"
+    }
+  ],
   "users": [
     {
       "id": 1,
       "name": "Dan",
       "productId": 1
-    },
-    {
-      "name": "Fdggdfg",
-      "email": "Fdggdfg",
-      "productId": 1,
-      "id": 2
-    },
-    {
-      "name": "teste",
-      "email": "teste",
-      "productId": 1,
-      "id": 3
-    },
-    {
-      "name": "teste",
-      "email": "teste",
-      "productId": 1,
-      "id": 4
-    },
-    {
-      "name": "Jnjkllkk",
-      "email": "Jnjkllkk",
-      "productId": 1,
-      "id": 5
-    },
-    {
-      "name": "Teste",
-      "email": "Teste",
-      "productId": 2,
-      "id": 6
     }
   ],
   "products": [
