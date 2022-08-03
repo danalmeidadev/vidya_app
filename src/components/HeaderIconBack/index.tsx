@@ -1,7 +1,13 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react';
 import { useNavigation, DrawerActionType } from '@react-navigation/core';
-import { Container, WrapperArrow, Icone } from './styles';
+import {
+  Container,
+  WrapperArrow,
+  Icone,
+  ScreenName,
+  WrapperScreenName,
+} from './styles';
 
 interface NavigationProps {
   goBack: () => void;
@@ -9,7 +15,11 @@ interface NavigationProps {
   navigate: (screen: string) => void;
 }
 
-export function HeaderIconBack() {
+type IHeaderProps = {
+  screenName?: string;
+};
+
+export function HeaderIconBack({ screenName }: IHeaderProps) {
   const navigation = useNavigation<NavigationProps>();
 
   return (
@@ -17,6 +27,9 @@ export function HeaderIconBack() {
       <WrapperArrow onPress={() => navigation.goBack()}>
         <Icone name="chevron-left" />
       </WrapperArrow>
+      <WrapperScreenName>
+        {screenName && <ScreenName>{screenName}</ScreenName>}
+      </WrapperScreenName>
     </Container>
   );
 }

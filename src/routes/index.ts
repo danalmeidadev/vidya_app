@@ -2,6 +2,11 @@ export const Routes = {
   LOGGED: {
     INITIAL: 'Initial',
     HOME: 'Home',
+    CLIENTS: 'Clients',
+    CREATECLIENTS: 'CreateClients',
+    PRODUCTS: 'Products',
+    PRODUCTDETAILS: 'ProductDetails',
+    USERSCLIENTS: 'UsersClients',
     PROFILE: 'Profile',
     PARTNERPROFILE: 'PartnerProfile',
     POSTERSINITIAL: 'PostersInitial',

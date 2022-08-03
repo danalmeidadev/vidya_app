@@ -1,4 +1,6 @@
+import { RFValue } from 'react-native-responsive-fontsize';
 import styled from 'styled-components/native';
+import { normalizePx } from '~/utils/normalize';
 
 interface ILoadingProps {
   color?: string;
@@ -11,5 +13,11 @@ export const Container = styled.View`
 `;
 
 export const Loading = styled.ActivityIndicator<ILoadingProps>`
-  color: ${({ theme, color }) => theme.colors.primary || color};
+  color: ${({ color }) => color};
+`;
+
+export const Text = styled.Text`
+  font-family: ${({ theme }) => theme.fonts.Poppins500Medium};
+  font-size: ${RFValue(12)}px;
+  margin-top: ${normalizePx(16)};
 `;

@@ -1,12 +1,20 @@
 import { all } from 'redux-saga/effects';
-import auth from './auth/saga';
-import register from './register/saga';
-import categories from './getCategories/saga';
-import services from './servicesUser/saga';
-import userMe from './userMe/saga';
-import staties from './staties/saga';
-import cities from './cities/saga';
+import document from './consultDocument/saga';
+import createProduct from './createProducts/saga';
+import createClient from './createClients/saga';
+import getClients from './getClients/saga';
+import getClientsWithProducts from './getClientsWithProducts/saga';
+import getUsersWithProducts from './getUsersWithProducts/saga';
+import user from './user/saga';
 
 export default function* rootSaga() {
-  yield all([auth, register, categories, services, userMe, staties, cities]);
+  yield all([
+    document,
+    createProduct,
+    createClient,
+    getClients,
+    getClientsWithProducts,
+    getUsersWithProducts,
+    user,
+  ]);
 }

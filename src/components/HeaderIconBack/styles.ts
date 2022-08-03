@@ -5,7 +5,14 @@ import { RFValue } from 'react-native-responsive-fontsize';
 import { normalizePx } from '~/utils/normalize';
 
 export const Container = styled.View`
-  margin-left: ${normalizePx(16)};
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+
+  padding-left: ${normalizePx(16)};
+  padding-top: 50px;
+  padding-bottom: 10px;
+  background-color: ${({ theme }) => theme.colors.primary};
 `;
 
 export const WrapperArrow = styled(TouchableOpacity)`
@@ -21,4 +28,12 @@ export const WrapperArrow = styled(TouchableOpacity)`
 export const Icone = styled(Feather)`
   font-size: ${RFValue(22)}px;
   color: ${({ theme }) => theme.colors.white};
+`;
+export const WrapperScreenName = styled.View`
+  width: 100%;
+`;
+export const ScreenName = styled.Text`
+  font-size: ${RFValue(16)}px;
+  color: ${({ theme }) => theme.colors.white};
+  margin-left: ${normalizePx(24)};
 `;

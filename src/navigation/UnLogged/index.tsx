@@ -8,6 +8,7 @@ import { CreateAccount } from '~/screens/CreateAccount';
 import { HeaderIconBack } from '~/components/HeaderIconBack';
 import { GetStart } from '~/screens/GetStart';
 import { Images } from '~/assets/images';
+import { HeaderIcon } from '~/components/HeaderIcon';
 
 const { Navigator, Screen } = createStackNavigator();
 
@@ -19,7 +20,6 @@ export function UnlogedStackNavigation() {
       screenOptions={{
         headerShown: false,
         headerLeft: () => <HeaderIconBack />,
-        headerRight: () => <Images.Logo />,
         headerTitle: '',
         headerTitleStyle: {
           color: colors.white,
@@ -27,7 +27,7 @@ export function UnlogedStackNavigation() {
           fontFamily: fonts.Poppins700Bold,
         },
         headerStyle: {
-          backgroundColor: colors.background,
+          backgroundColor: colors.primary,
           borderBottomColor: colors.background,
           borderBottomWidth: 0,
           elevation: 0,
@@ -49,7 +49,7 @@ export function UnlogedStackNavigation() {
         component={Login}
         options={{
           headerShown: true,
-          headerTransparent: true,
+          headerTransparent: false,
         }}
       />
       <Screen
@@ -57,7 +57,7 @@ export function UnlogedStackNavigation() {
         component={CreateAccount}
         options={{
           headerShown: true,
-          headerTransparent: true,
+          headerTransparent: false,
         }}
       />
     </Navigator>

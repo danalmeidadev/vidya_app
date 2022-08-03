@@ -1,18 +1,18 @@
 import { combineReducers } from 'redux';
-import auth from './auth/reducer';
-import register from './register/reducer';
-import categories from './getCategories/reducer';
-import services from './servicesUser/reducer';
-import userMe from './userMe/reducer';
-import staties from './staties/reducer';
-import cities from './cities/reducer';
+import document from './consultDocument/reducer';
+import createProduct from './createProducts/reducer';
+import createClient from './createClients/reducer';
+import getClients from './getClients/reducer';
+import getClientsWithProducts from './getClientsWithProducts/reducer';
+import getUsersWithProducts from './getUsersWithProducts/reducer';
+import user from './user/reducer';
 
 export default combineReducers({
-  auth,
-  register,
-  categories,
-  services,
-  userMe,
-  staties,
-  cities,
+  document,
+  createProduct,
+  createClient,
+  getClients,
+  getClientsWithProducts,
+  getUsersWithProducts,
+  user,
 });

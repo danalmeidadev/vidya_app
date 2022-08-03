@@ -5,25 +5,25 @@ import createSagaMiddleware from 'redux-saga';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import rootReduce from './modules/rootReduce';
 import rootSaga from './modules/rootSaga';
-import { IAuthState } from './modules/auth/types';
-import { ICategoriesState } from './modules/getCategories/types';
-import { IUserServiceState } from './modules/servicesUser/types';
-import { IUserMeState } from './modules/userMe/types';
-import { IStatiesState } from './modules/staties/types';
-import { ICitiesState } from './modules/cities/types';
+import { IConsultDocumentState } from './modules/consultDocument/types';
+import { ICreateClientState } from './modules/createClients/types';
+import { IGetClientsState } from './modules/getClients/types';
+import { IGetClientsWithProductsState } from './modules/getClientsWithProducts/types';
+import { IGetUsersWithProductsState } from './modules/getusersWithProducts/types';
+import { IUserState } from './modules/user/types';
 
 export interface IAplicationState {
-  auth: IAuthState;
-  categories: ICategoriesState;
-  services: IUserServiceState;
-  userMe: IUserMeState;
-  staties: IStatiesState;
-  cities: ICitiesState;
+  document: IConsultDocumentState;
+  createClient: ICreateClientState;
+  getClients: IGetClientsState;
+  getClientsWithProducts: IGetClientsWithProductsState;
+  getUsersWithProducts: IGetUsersWithProductsState;
+  user: IUserState;
 }
 
 const persistedReducer = persistReducer(
   {
-    key: '@toLivre',
+    key: '@vidya',
     storage: AsyncStorage,
     whitelist: ['auth'],
     version: 1,

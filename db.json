@@ -1,0 +1,73 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Dan",
+      "productId": 1
+    },
+    {
+      "name": "Fdggdfg",
+      "email": "Fdggdfg",
+      "productId": 1,
+      "id": 2
+    },
+    {
+      "name": "teste",
+      "email": "teste",
+      "productId": 1,
+      "id": 3
+    },
+    {
+      "name": "teste",
+      "email": "teste",
+      "productId": 1,
+      "id": 4
+    },
+    {
+      "name": "Jnjkllkk",
+      "email": "Jnjkllkk",
+      "productId": 1,
+      "id": 5
+    },
+    {
+      "name": "Teste",
+      "email": "Teste",
+      "productId": 2,
+      "id": 6
+    }
+  ],
+  "products": [
+    {
+      "name": "Call",
+      "description": "Ferramenta de controle e gestão do telemarketing.",
+      "midias": "https://vidyacode.com.br/wp-content/uploads/2022/04/LOGOTIPO-CALL-1.png",
+      "version": "1.0",
+      "clientId": 1,
+      "id": 1
+    },
+    {
+      "name": "Repay",
+      "description": "Plataforma de controle de reembolsos e adiantamentos.",
+      "midias": "https://vidyacode.com.br/wp-content/uploads/2022/04/LOGOTIPO-REPAY-1.png",
+      "version": "1.0",
+      "clientId": 1,
+      "id": 2
+    }
+  ],
+  "clients": [
+    {
+      "document": "39.677.057/0001-65",
+      "companyName": "DALVAN DE ALMEIDA OLIVEIRA 05848088799",
+      "companyFantasy": "UPTOWN APP",
+      "zipCode": "27.212-090",
+      "street": "RUA CUBA",
+      "number": "95",
+      "district": "VILA AMERICANA",
+      "city": "VOLTA REDONDA",
+      "state": "RJ",
+      "email": "devdanalmeida@gmail.com",
+      "cellphone": "(24) 9983-0477",
+      "id": 1
+    }
+  ]
+}
